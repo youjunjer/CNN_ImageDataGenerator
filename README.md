@@ -3,4 +3,4 @@ ImageDataGenerator是一個非常好用的工具，尤其在樣本數量很少�
 
 教學影片：https://www.youtube.com/watch?v=HJ7KiakBYLo
 
-[![Python AI 圖片產生器 ImageDataGenerator來製作商品辨識器](https://i1.ytimg.com/vi/HJ7KiakBYLo/maxresdefault.jpg) { width=300px }](https://www.youtube.com/watch?v=HJ7KiakBYLo)
+[![Python AI 圖片產生器 ImageDataGenerator來製作商品辨識器](https://i1.ytimg.com/vi/HJ7KiakBYLo/maxresdefault.jpg)](https://www.youtube.com/watch?v=HJ7KiakBYLo)
