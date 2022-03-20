@@ -7,7 +7,7 @@ while cap.isOpened():
   ret, frame = cap.read() #ret=retval,frame=image    
   # 顯示圖片
   cv2.imshow('frame', frame)
-  frame=cv2.resize(frame,(100,100))
+  frame=cv2.resize(frame,(200,200))
   i=i+1
   cv2.imwrite("train/C" + '/' + str(i) + ".jpg", frame) #記得改路徑
   print("Save photo:" + str(i) + ".jpg")
