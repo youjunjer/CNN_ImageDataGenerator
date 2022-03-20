@@ -1,14 +1,18 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
-size=(100,100) #指定圖片大小
+size=(200,200) #指定圖片大小
 batchSize=64 #小->收斂快，大->穩定
 trainFileCount=2500 #訓練檔案數量500x5=2500
 testFileCount=2500 #測試檔案數量200x5=2500
 
 # 簡單的二層卷積加上ReLU激勵函式，再接一個max-pooling層
 model = tf.keras.models.Sequential()
-#64個3x3卷積核(3or5or7)
-model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(100, 100, 3)))
+#64個3x3卷積核(3x3)
+model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(200, 200, 3)))
+model.add(tf.keras.layers.MaxPooling2D((2, 2)))
+
+#32個3x3卷積核
+model.add(tf.keras.layers.Conv2D(32, (3, 3), activation='relu'))
 model.add(tf.keras.layers.MaxPooling2D((2, 2)))
 
 #32個3x3卷積核
