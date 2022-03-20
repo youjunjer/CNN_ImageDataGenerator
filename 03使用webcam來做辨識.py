@@ -4,7 +4,7 @@ import tensorflow as tf
 import cv2
 import numpy as np
 from PIL import ImageFont, ImageDraw, Image,ImageOps
-#顯示用宣告
+#顯示用宣告 請複製c:\windows\fonts\的微軟正黑體到根目錄
 font1 = ImageFont.truetype('msjhl.ttc', 50)
 font2 = ImageFont.truetype('msjhl.ttc', 30)
 fillColor = (255,0,0)
@@ -13,8 +13,8 @@ productDic={"C":"小貓吊飾",  "D":"狗狗吊飾", "L":"鱷魚吊飾","P":"布
 priceDic={"C":16,  "D":20, "L":35,"P":40,"N":0}
 #載入模型
 model=tf.keras.models.load_model('CNN_Toy.h5') #選擇正確的模型檔(h5)
-size=(100,100)
-data = np.ndarray(shape=(1, 100,100, 3), dtype=np.float32)
+size=(200,200)
+data = np.ndarray(shape=(1, 200,200, 3), dtype=np.float32)
 #取得類別標籤(用測試資料夾)
 dirList = sorted(os.listdir("train\\"))
 cap = cv2.VideoCapture(1)#自行選擇攝影機編號
